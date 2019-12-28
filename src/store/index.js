@@ -8,7 +8,10 @@ export default new Vuex.Store({
   state: {
     user: {id: 'abc123', name: 'Adam Jahr'},
     categories: ['sustainability', 'nature', 'animal welfare', 'housing', 'education', 'food', 'community'],
-    events: []
+    event: {},
+    events: [],
+    eventsTotal: 0
+
   },
   mutations: {
     ADD_EVENT(state, event) {
@@ -16,6 +19,9 @@ export default new Vuex.Store({
     },
     SET_EVENTS(state, events) {
       state.events = events
+    },
+    SET_EVENTS_TOTAL(state, eventsTotal) {
+      state.eventsTotal = eventsTotal
     }
   },
   actions: {
