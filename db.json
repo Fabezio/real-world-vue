@@ -71,6 +71,24 @@
           "name": "Mary Gordon"
         }
       ]
+    },
+    {
+      "id": 2980803,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "parrot on sale",
+      "description": "nothing to add",
+      "location": "paris, gate of versailles",
+      "date": "2019-12-29T01:42:00.000Z",
+      "time": "14:00",
+      "attendees": []
     }
   ]
 }

@@ -4,19 +4,14 @@ router-link.event-link(:to='{ name: "event-show", params: {id: event.id} } ')
     span.eyebrow @{{ event.time}} on {{event.date}}
     h4.title {{event.title}}
     BaseIcon(name='users') {{ event.attendees ? event.attendees.length : 0}} attending
-        
-            
-        
 </template>
 
 <script>
-
-    export default {
-      
-      props: {
-        event: Object 
-      }
-    }
+export default {
+  props: {
+    event: Object 
+  }
+}
 </script>
 
 <style scoped>

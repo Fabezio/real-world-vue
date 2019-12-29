@@ -25,13 +25,10 @@
                 select(v-model='event.time')
                     option(v-for='time in times', :key='time') {{ time }}
             input.button.-fill-gradient(type='submit', value='Submit')
-
-        
 </template>
 
 <script>
 import Datepicker from 'vuejs-datepicker'
-
 export default {
     components: {
         Datepicker
@@ -49,7 +46,7 @@ export default {
     },
     methods: {
         createEvent() {
-            this.$store.dispatch('createEvent', this.event).then(()=> {
+            this.$store.dispatch('event/createEvent', this.event).then(()=> {
                 this.$router.push({
                     name: 'event-show',
                     params: {id: this.event.id}
@@ -58,10 +55,11 @@ export default {
             })
         },
         createFreshEventObject() {
-            const user = this.$store.state.user
-            const id = Math.floor(Math.random()* 10**7 )
+            const user = this.$store.state.user.user
+            const id = Math.floor(Math.random() * 10**7 )
             return {
                 id: id,
+                user: user,
                 category: '',
                 organizer: user,
                 title: '',
@@ -70,9 +68,7 @@ export default {
                 date: '',
                 time: '',
                 attendees: []
-
             }
-
         }
     }
 }

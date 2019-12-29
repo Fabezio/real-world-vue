@@ -8,7 +8,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/events',
+    path: '/',
     name: 'event-list',
     component: EventList
   },
