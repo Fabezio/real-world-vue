@@ -1,14 +1,18 @@
 <template lang="pug">
   #app
     NavBar
+    NotificationContainer
     router-view(:key='$route.fullPath')
 </template>
 
 <script>
 import NavBar from '@/components/NavBar'
+import NotificationContainer from '@/components/NotificationContainer.vue'
+
 export default {
   components: {
-    NavBar
+    NavBar,
+    NotificationContainer
   } 
 }
 </script>
