@@ -241,4 +241,11 @@ select:focus::ms-value {
 select::ms-expand {
   opacity: 0;
 }
+.disabled {
+  color: silver;
+  opacity: .5;
+  text-decoration: none;
+  
+  
+}
 </style>

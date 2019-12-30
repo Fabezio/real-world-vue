@@ -2,7 +2,8 @@
 #nav.nav
   router-link.brand(to='/') Real World Events
   nav
-    router-link(:to="{name: 'event-list'}") List | 
+    router-link(:to="{name: 'event-list'}") List
+    span  | 
     router-link(:to="{name: 'event-create'}") Create
 </template>
 
