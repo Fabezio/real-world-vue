@@ -6,16 +6,14 @@
       select(v-model='event.category')
         option(v-for='cat in categories', :key='cat') {{ cat }}
       h3 Name & describe your event
-      .field
-        label Title
-        input(v-model='event.title', type='text', placeholder='Add an event title')
-      .field
-        label Description
-        input(v-model='event.description', type='text', placeholder='Add a description')
+
+      BaseInput.field(label='Title' v-model="event.title" type='text' placeholder='Title')
+      BaseInput.field(label='Description' v-model="event.description" type='text' placeholder='Description')
+      
+      
       h3 Where is your event?
-      .field
-        label Location
-        input(v-model='event.location', type='text', placeholder='Add a location')
+      BaseInput.field(label='Location' v-model="event.location" type='text' placeholder='Location')
+      
       h3 When is your event?
       .field
         label Date
@@ -30,9 +28,11 @@
 <script>
 import Datepicker from 'vuejs-datepicker'
 import NProgress from 'nprogress'
+import BaseInput from '@/components/BaseInput'
 export default {
   components: {
-    Datepicker
+    Datepicker,
+    BaseInput
   },
   data () {
     const times = []
