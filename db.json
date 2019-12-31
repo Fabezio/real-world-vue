@@ -323,6 +323,24 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 5548197,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "form base input, select, button test",
+      "description": "",
+      "location": "",
+      "date": "2019-12-31T21:27:00.000Z",
+      "time": "22:00",
+      "attendees": []
     }
   ]
 }
