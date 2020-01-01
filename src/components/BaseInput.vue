@@ -1,7 +1,7 @@
 <template lang="pug">
 div
     label(v-if='label') {{label}}
-    input(:value='value ' @input="updateValue" v-bind='$attrs')
+    input(:value='value' v-on='listeners' @input="updateValue" v-bind='$attrs')
 </template>
 <script>
     export default {
@@ -11,12 +11,21 @@ div
                 type: String,
                 default: ''
             },
-            value: [String, Number ]
+            value: [String, Number, Array ]
         },
         methods: {
             updateValue(event) {
                 this.$emit('input', event.target.value)
             }
+        },
+        computed: {
+            listeners() {
+                return {
+                    ...this.$listeners,
+                    input: this.updateValue
+                }
+            }
+
         }
     }
 </script>

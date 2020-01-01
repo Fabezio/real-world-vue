@@ -341,6 +341,42 @@
       "date": "2019-12-31T21:27:00.000Z",
       "time": "22:00",
       "attendees": []
+    },
+    {
+      "id": 2172440,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "19:00",
+      "attendees": []
+    },
+    {
+      "id": 6631121,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }

@@ -34,7 +34,7 @@ import { required, email } from 'vuelidate/lib/validators'
     }
 </script>
 
-<style scoped>
+<style >
 .errorMessage {
     color: darkred;
 }
