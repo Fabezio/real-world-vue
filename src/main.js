@@ -5,6 +5,9 @@ import camelCase from 'lodash/camelCase';
 import router from './router';
 import store from './store/store';
 import 'nprogress/nprogress.css';
+import Vuelidate from 'vuelidate';
+
+Vue.use(Vuelidate)
 
 
 const requireComponent = require.context(
