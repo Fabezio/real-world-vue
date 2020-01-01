@@ -29,7 +29,7 @@ function getPageEvents(routeTo, next) {
 export default {
   props: {
     page: {
-      type: Object,
+      type: [ Number],
       required: true
     },
   },
