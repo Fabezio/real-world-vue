@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   .event-header
-    span.eyebrow @{{ event.time }} on {{ event.date }}
+    span.eyebrow @{{ event.time }} on {{ event.date | date }}
     h1.title {{ event.title }}
     h5 Organized by {{ event.organizer ? event.organizer.name : '' }}
     h5 Category: {{ event.category }}

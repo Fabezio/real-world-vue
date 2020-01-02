@@ -4,30 +4,19 @@ div
     input(:value='value' v-on='listeners' @input="updateValue" v-bind='$attrs')
 </template>
 <script>
-    export default {
-        inheritAttrs: false,
-        props: {
-            label: {
-                type: String,
-                default: ''
-            },
-            value: [String, Number, Array ]
-        },
-        methods: {
-            updateValue(event) {
-                this.$emit('input', event.target.value)
+import {formFieldMixin} from '@/mixins/formFieldMixin.js'
+export default {
+    mixins: [formFieldMixin],
+    computed: {
+        listeners() {
+            return {
+                ...this.$listeners,
+                input: this.updateValue
             }
-        },
-        computed: {
-            listeners() {
-                return {
-                    ...this.$listeners,
-                    input: this.updateValue
-                }
-            }
-
         }
+
     }
+}
 </script>
 
 <style scoped>

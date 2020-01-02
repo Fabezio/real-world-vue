@@ -1,7 +1,7 @@
 <template lang="pug">
 router-link.event-link(:to='{ name: "event-show", params: {id: event.id} } ') 
   div.event-card.-shadow
-    span.eyebrow @{{ event.time}} on {{event.date}}
+    span.eyebrow @{{ event.time}} on {{event.date | date}}
     h4.title {{event.title}}
     BaseIcon(name='users') {{ event.attendees ? event.attendees.length : 0}} attending
 </template>

@@ -5,25 +5,16 @@ div
         option(v-for='option in options', :key='option' , :value='option', :selected='option === value' ) {{ option }}
 </template>
 <script>
-    export default {
-        inheritAttrs: false,
-        props: {
-            options: {
-                type: Array,
-                required: true
-            },
-            label: {
-                type: String,
-                default: ''
-            },
-            value: [Array , String]
-        },
-        methods: {
-            updateValue(event) {
-                this.$emit('input', event.target.value)
-            }
+import {formFieldMixin} from '@/mixins/formFieldMixin.js'
+export default {
+    mixins: [formFieldMixin],
+    props: {
+        options: {
+            type: Array,
+            required: true
         }
     }
+}
 </script>
 
 <style scoped>
